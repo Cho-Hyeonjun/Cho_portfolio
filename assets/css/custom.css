@@ -56,7 +56,7 @@ p{font-size: 18px;}
 .main.style2#one .content.box.style2 div.info{float: left;}
 .main.style2#one .content .prof_img{float: left; width: calc((100% / 3) - 40px); height: 310px; 
   display: block; border-radius: 150px; background-color: chartreuse;
-  background: url(images/prof_02.jpg) no-repeat center center / cover;
+  background: url(images/profile02.jpg) no-repeat center center / cover;
   margin-right: 40px;
 }
 .main.style2#one .info > div{transition: all 0.3s;}
@@ -83,38 +83,47 @@ border-radius: 50%; width: 30px; height: 30px; padding: 5px; margin-right: 10px;
 #two h3{height: 30px;}
 #two h3 > *{float: left;}
 #two h3 span{line-height: 30px;}
-
+.adre_box {padding: 0px 0px 40px 0px;}
 .content>div>p{text-align: left;}
 
 .gallery > article{overflow: hidden;}
-.gallery > article .image{height: 245px; overflow: hidden; transition: all 0.3s;}
-.gallery > article .image::before{transition: all 0.3s; opacity: 0; z-index: 2;}
+.gallery > article .image{height: 360px;overflow: hidden;transition: all 0.3s;}
+.gallery > article .image::before{transition: all 0.3s;opacity: 1;z-index: 2;}
 .gallery > article .image img{transition: all 0.3s; display: none;}
 .gallery > article .image{
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left top;
   background-size: cover;
 }
-.gallery > article:nth-child(1) .image{background-image: url(../../images/thumbs/casio.jpg);}
-.gallery > article:nth-child(2) .image{background-image: url(../../images/thumbs/nexfield.jpg);}
-.gallery > article:nth-child(3) .image{background-image: url(../../images/thumbs/soribada.jpg);}
-.gallery > article:nth-child(4) .image{background-image: url(../../images/thumbs/work.jpg);}
+.gallery > article:nth-child(1) .image{background-image: url(images/project01.jpg);}
+.gallery > article:nth-child(2) .image{background-image: url(images/project02.jpg);}
+.gallery > article:nth-child(3) .image{background-image: url(images/project03.jpg);}
+.gallery > article:nth-child(4) .image{background-image: url(images/project04.jpg);}
 .gallery.graphic > article:nth-child(1) .image{background-image: url(../../images/thumbs/05_02.png);}
 .gallery.graphic > article:nth-child(2) .image{background-image: url(../../images/thumbs/smeg.jpg);
   background-position: top center;
 }
 .gallery > article:hover .image img{transform: scale(1.1);}
-.gallery > article:hover .image::before{opacity: 1;}
-.gallery > article{position: relative;}
+.gallery > article:hover .image::before{opacity: 0;}
+.gallery > article{position: relative;margin: 20px;border-radius: 30px;box-shadow: 0px 5px 15px rgb(124 124 124 / 17%);}
 .gallery > article p{
+  width: 100%;
+  padding: 20px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-  font-size: 1.8rem; font-weight: bold;
+  font-size: 1.7rem;
+  font-weight: bold;
   color: #fff;
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  opacity: 0; transition: all 0.5s; z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.5s;
+  z-index: 3;
 }
 .gallery > article p span{display: block;}
-.gallery > article:hover p{opacity: 1;}
+.gallery > article p span:nth-child(2){padding-top: 10px;font-size: 0.75em;\: #;}
+.gallery > article:hover p{opacity: 0;}
 .main .content h3{display: block; text-align: left; margin: 20px 0;}
 
 .poptrox-popup .closer:before{top: 0; right: -50px;}
@@ -234,7 +243,6 @@ p.close:hover{
     height: calc(100vh - 40px);
   }
   .main.style1 p{height: 48px;}
-  .gallery > article p{font-size: 1.1rem; top: 40%;}
   .main.style2#one .content.box.style2 .info>div{float: none; text-align: left; width: 100%; margin-right: 0;}
   .main.style2#one .content.box.style2 div.prof_img{float: none; margin: 0 auto;}
   .main.style2#one .content.box.style2 div.info{float: none;}
@@ -247,9 +255,10 @@ p.close:hover{
     width: 100%;
   }
   #intro.main.dark .button.style2.down{bottom: -50%;}
+  .gallery article{width: 100%; margin:20px 0px;}
   .gallery > article .image img{ height: 245px; width: auto;}
   .gallery > article .image::before{opacity: 1;}
-  .gallery > article p{opacity: 1;}
+  .gallery > article p{opacity: 1;font-size: 1.4rem;top: 50%;}
   .adress{
     float: none;
   }
@@ -278,7 +287,10 @@ p.close:hover{
 
 
 }
-
+@media (max-width:480px){
+  .gallery article{height:250px;}
+  .gallery > article .image{height:100%;}
+}
 
 
 
